@@ -82,16 +82,16 @@ function decryptCode(code) {
 
 // code 2:
 function decryptCode2(code) {
-    let decode = code.split("").map(i => {
-        if (i === i.toLowerCase()) {
-            return i.toUpperCase();
-        } else if (i === i.toUpperCase()) {
-            return i.toLowerCase();
-        } else {
-            return i;
-        }
-    })
-    return decode;
+  let decode = code.split("").map((i) => {
+    if (i === i.toLowerCase()) {
+      return i.toUpperCase();
+    } else if (i === i.toUpperCase()) {
+      return i.toLowerCase();
+    } else {
+      return i;
+    }
+  });
+  return decode;
 }
 const code = "K14 Challenge";
 const decryptedCode = decryptCode(code);
