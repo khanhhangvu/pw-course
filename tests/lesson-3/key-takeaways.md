@@ -1,8 +1,8 @@
 # Convention (quy tắc đặt tên)
-`snake_case` : Không dùng 
-`kebab-case` : Tên file 
-`camelCase`  : Tên biến 
-`PascalCase` : Tên class 
+- `snake_case` : Không dùng 
+- `kebab-case` : Tên file 
+- `camelCase`  : Tên biến 
+- `PascalCase` : Tên class 
 
 # Console Log
 
