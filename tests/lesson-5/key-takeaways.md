@@ -55,6 +55,19 @@
 ```
 `//tag[@attribute="value"]`
 ```
+```
+Format:
+//thẻ[@thuoc tính = '...'
+thuộc tính cần lấy ưu tiên duy nhất (vd: id)
+
+-----
+lấy theo text:
+//thẻ[text() = "...."
+
+------
+lấy khi text quá dài:
+//thẻ[containts(text(),"....")]
+```
 
 # Playwright Basic Syntax
 
@@ -108,4 +121,14 @@ page.locator("//input").pressSequentially("text"); // Gõ từng ký tự
 const isChecked = page.locator("//input").isChecked();
 page.locator("//input").check(); // Check
 page.locator("//input").setChecked(false); // Uncheck
+```
+## Hover
+```
+await page.locator("<xpath here>").hover();
+```
+
+# Note
+## Confirmation dialog
+```
+page.on('dialog', dialog => dialog.accept());
 ```

@@ -24,19 +24,52 @@
 
 ## Các lệnh Git
 1. Khởi tạo repo mới
-- git init
+```
+git init
+```
 2. Cấu hình user.name và user.email
-- git config
+```
+git config
+```
 3. Đưa file vào staging
-- git add <file_name>
+```
+git add <file_name>
+```
 4. Đưa tất cả file vào staging
-- git add .
+```
+git add .
+```
 5. Tạo phiên bản mới (commit)
-- git commit -m "message"
+```
+git commit -m "message"
+```
 6. Kiểm tra trạng thái các file
-- git status
+```
+git status
+```
 7. Xem lịch sử commit
-- git log
+```
+git log
+```
+8. Thay đổi commit message
+```
+git commit --amend
+```
+- Gõ `i` để vào chế độ insert
+- Gõ `esc` để thoát insert
+- Gõ `:wq` để lưu và thoát
+- Hoặc:
+```
+git commit --amend -m "message mới"
+```
+9. Đưa file từ vùng staging về working directory
+```
+git restore --staged <file>
+```
+10. Đưa từ vùng repository về working directory (undo 1 commit)
+```
+git reset HEAD~1
+```
 
 ## Commit Convention
 - Format: *<type>: <short_description>*
@@ -44,10 +77,34 @@
     - *feat*: thêm tính năng mới
     - *fix*: sửa lỗi
     - *chore*: chỉnh sửa nhỏ (xoá file unused, typo...)
+  
+## Branching model
+- **Branch** = nhánh phát triển
+- Dùng để tạo vùng làm việc riêng biệt không ảnh hưởng vùng ổn định
+- Không dùng branch → phải copy file thủ công
+
+### Tạo branch
+```
+git branch <ten_branch>
+git checkout <ten_branch>
+# hoặc gộp lại vừa tạo và checkout:
+git checkout -b <ten_branch>
+```
+
+## .gitignore
+- `.gitignore` = file cấu hình để **bỏ qua file/folder không cần Git theo dõi**
+  ```
+  file.txt       # bỏ qua file
+  folder-name/   # bỏ qua thư mục
+  ```
+- Xem các thay đổi trong Source Control (trên VSC)
+
 
 # JavaScript basic
 ## Cách chạy project
-- Chạy bằng lệnh: *node file.js*
+```
+node file.js*
+```
 
 ## Khai báo biến (Variables)
 - **let**: dùng khi giá trị có thể thay đổi.
