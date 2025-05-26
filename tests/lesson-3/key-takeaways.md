@@ -4,7 +4,7 @@
 `camelCase`  : Tên biến 
 `PascalCase` : Tên class 
 
-# ✅ Console Log
+# Console Log
 
 ```
 console.log('text');
